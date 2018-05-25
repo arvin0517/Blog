@@ -22,7 +22,7 @@
 				   <div id="" class="description">一个懒人不想做但不得不做的博客</div>			   	
 			   </div>
 			</div>
-			<nav>
+			<nav class="bounceInto">
 				<ul>
 					<li><a class="active" href="">技术博文</a></li>
 					<li><a href="">前端作品</a></li>
