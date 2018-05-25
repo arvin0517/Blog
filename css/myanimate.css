@@ -1,0 +1,38 @@
+
+/*左边淡入*/
+.leftInto
+{
+	position:relative;
+	animation:leftIn 1.5s;
+	-webkit-animation:leftIn 1.5s; /* Safari and Chrome */
+}
+@keyframes leftIn
+{
+	from {left: -200px;opacity: 0;}
+	to {left: 0;opacity: 1;}
+}
+
+@-webkit-keyframes leftIn /* Safari and Chrome */
+{
+	from {left: -200px;opacity: 0;}
+	to {left: 0;opacity: 1;}
+}
+
+/*右边淡入*/
+.rightInto
+{
+	position:relative;
+	animation:rightIn 1.5s;
+	-webkit-animation:rightIn 1.5s; /* Safari and Chrome */
+}
+@keyframes rightIn
+{
+	from {left: 200px;opacity: 0;}
+	to {left: 0;opacity: 1;}
+}
+
+@-webkit-keyframes rightIn /* Safari and Chrome */
+{
+	from {left: 200px;opacity: 0;}
+	to {left: 0;opacity: 1;}
+}
