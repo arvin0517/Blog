@@ -29,6 +29,7 @@
 					<li><a href="">碎碎念</a></li>
 					<li><a href="">留言板</a></li>
 					<li><a href="">关于我</a></li>
+					<li><a href="">测试</a></li>
 				</ul>
 			</nav>
 		</div>
