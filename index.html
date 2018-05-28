@@ -3,11 +3,88 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>个人博客</title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;background-color: red;margin-bottom: 2px;			}
+			@keyframes bounceIn {
+					  from, 20%, 40%, 60%, 80%, to {
+					    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+					  }
+					
+					  0% {
+					    opacity: 0;
+					    transform: scale3d(.3, .3, .3);
+					  }
+					
+					  20% {
+					    transform: scale3d(1.1, 1.1, 1.1);
+					  }
+					
+					  40% {
+					    transform: scale3d(.9, .9, .9);
+					  }
+					
+					  60% {
+					    opacity: 1;
+					    transform: scale3d(1.03, 1.03, 1.03);
+					  }
+					
+					  80% {
+					    transform: scale3d(.97, .97, .97);
+					  }
+					
+					  to {
+					    opacity: 1;
+					    transform: scale3d(1, 1, 1);
+					  }
+					}
+			@keyframes bounceInDown {
+			  from, 60%, 75%, 90%, to {
+			   /* animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);*/
+			   /*animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);*/
+			  }
+			
+			  0% {
+			    opacity: 0;
+			    transform: translate3d(0, -3000px, 0) scale3d(.3, .3, .3);
+			  }
+			
+			  60% {
+			    opacity: 1;
+			    transform: translate3d(0, 25px, 0) scale3d(2, 1, 1);
+			  }
+			
+			  75% {
+			    transform: translate3d(0, -10px, 0) scale3d(.8, 1, 1);
+			  }
+			
+			  90% {
+			    transform: translate3d(0, 5px, 0) scale3d(1.5, 1, 1);
+			  }
+			
+			  to {
+			    transform:scale3d(1, 1, 1);
+			  }
+			}
+			.bounceInDown {
+			  animation-name: bounceInDown;
+			  animation-duration: 2s;
+			}
+			/*.test{ transform: translate3d(0, -3000px, 0); background-color: #018CE9;}
+			.test2{ transform: translate3d(0, 25px, 0); background-color: #018CE9;}
+			.test3{ transform: translate3d(0, -10px, 0); background-color: #018CE9;}	
+			.test4{ transform: translate3d(0, 5px, 0); background-color: #018CE9;}	
+			.test5{ transform: none; background-color: #018CE9;}*/
+			/*.test6{ transform: scale3d(1, 1, 1);background-color: #018CE9;} 	*/	
+		</style>
 	</head>
 	<body>
-		<script color="0,0,255" opacity='0.7' zIndex="-2" count="70" src="js/canvas-nest.js" type="text/javascript" charset="utf-8"></script>
-		<div class="container" id="">
-			
-		</div>
+		<!--<script color="0,0,255" opacity='0.7' zIndex="-2" count="70" src="js/canvas-nest.js" type="text/javascript" charset="utf-8"></script>-->
+		<div class="bounceInDown" id="">(.3, .3, .3)</div>
+		<!--<div class="test2" id="">1.1, 1.1, 1.1)</div>
+		<div class="test3" id="">(.9, .9, .9)</div>
+		<div class="test4" id="">(1.03, 1.03, 1.03)</div>
+		<div class="test5" id="">(.97, .97, .97)</div>
+		<div class="test6" id="">(1, 1, 1)</div>-->
 	</body>
 </html>
