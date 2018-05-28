@@ -58,7 +58,10 @@
         }
         */
         *{
-        	transition: all 0.5s; -webkit-transition: all 0.5s;
+        	transition: all 4s; 
+        	-webkit-transition: all 4s;
+        	transform-origin: center center;
+        	-webkit-transform-origin: center center; 
         }
         ul{
         	
@@ -69,14 +72,16 @@
        	     width: 400px;
        	     height: 200px;
        	     position: absolute;
-       }
+       	     
+       	           }
        
-       .out{
-       	  transform: scale3d(0,0,0)
+       .out:hover{
+       	  transform: scale(0,0);
+       	  
        	   opacity: 0;
        }
        .in{
-       	   transform: scale3d(1,1,1)
+       	   transform: scale3d(1,1,1);
        	   opacity: 1;
        }
 		</style>
@@ -100,10 +105,10 @@
 	<body>
 		<div id="container">
         <ul class="pic">
-            <li><a href="javascript:;"><img src="img/testimg/lunbo1.jpg" alt="pic1"></a></li>
+            <!--<li ><a href="javascript:;"><img  src="img/testimg/lunbo1.jpg" alt="pic1"></a></li>
             <li><a href="javascript:;"><img src="img/testimg/lunbo2.jpg"  alt="pic2"></a></li>
-            <li><a href="javascript:;"><img src="img/testimg/lunbo3.jpg"  alt="pic3"></a></li>
-            <li><a href="javascript:;"><img src="img/testimg/lunbo1.jpg"  alt="pic1"></a></li><!-- 克隆第一张 -->
+            <li><a href="javascript:;"><img src="img/testimg/lunbo3.jpg"  alt="pic3"></a></li>-->
+            <li class="out"><a href="javascript:;"><img class="out" src="img/testimg/lunbo1.jpg"  alt="pic1"></a></li><!-- 克隆第一张 -->
             <!--<li><a href="javascript:;"><img src="img/testimg/lunbo2.jpg"  alt="pic2"></a></li>
             <li><a href="javascript:;"><img src="img/testimg/lunbo3.jpg"  alt="pic3"></a></li>-->
         </ul>
