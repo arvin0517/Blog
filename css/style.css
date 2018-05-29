@@ -32,7 +32,7 @@ nav ul li a:hover{ margin-top: -12px; box-shadow: 0 2px 6px rgba(100, 100, 100, 
 /*轮播start*/
 .lunbo{ position: absolute; float: left; width: 630px;  height: 300px; /*background: rgba(245,245,245,1); */ margin-top: 10px;}
 .pic{ padding: 0; margin: 0; list-style: none; position: relative; width: 630px; height: 300px; }
-.pic li{ width: 630px;   height: 300px; position: absolute; box-shadow: 0 6px 10px rgba(100, 100, 100, 0.5); }
+.pic li{ width: 630px;   height: 300px; position: absolute; box-shadow: 0 4px 10px rgba(100, 100, 100, 0.5); }
 .pic li img{ width: 100%; height: 100%; }
 .beforeim{ transform: scale(0,0); opacity: 0; }
 .imgout{ transition: all 3s;  -webkit-transition: all 3s; transform: scale(0,0); opacity: 0; transform-origin: left bottom; -webkit-transform-origin:  left bottom; }

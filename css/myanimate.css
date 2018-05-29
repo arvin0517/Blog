@@ -80,14 +80,18 @@
 
 
 /*轮播图进入start*/
+
 .lunboIn
 {
-	animation:lunboIn 2s;
-	-webkit-animation:lunboIn 2s; /* Safari and Chrome */
+	animation:lunboIn 3s;
+	-webkit-animation:lunboIn 3s; /* Safari and Chrome */
+	/*animation-delay:2s;
+    -webkit-animation-delay:2s; /* Safari 和 Chrome */*/
 }
 @keyframes lunboIn{
 		
 	from{left: -700px; opacity: 0; transform: scale3d(0, 0, 0);}
+	33.33333%{left: -700px; opacity: 0; transform: scale3d(0, 0, 0);}
 	to {left: 0; opacity: 1; transform: scale3d(1, 1, 1);}
 }
 
