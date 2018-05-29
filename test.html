@@ -58,38 +58,112 @@
         }
         */
         *{
-        	transition: all 4s; 
-        	-webkit-transition: all 4s;
-        	transform-origin: center center;
-        	-webkit-transform-origin: center center; 
+
+        	
         }
         ul{
-        	
+        	padding: 0;
+        	margin: 0;
         	list-style: none;
         	position: relative;
+        	width: 400px;
+        	height: 200px;
         }
-       .pic li img{      	
-       	     width: 400px;
+        .pic li{
+        	 width: 400px;
        	     height: 200px;
        	     position: absolute;
-       	     
-       	           }
-       
+        }
+       .pic li img{      	
+             width: 100%;
+             height: 100%;
+       	    
+       	        }
+       .out{
+       	     transform-origin: left bottom;
+        	-webkit-transform-origin:  left bottom;
+       }
        .out:hover{
        	  transform: scale(0,0);
-       	  
-       	   opacity: 0;
+       	  left: 0;
+       	  bottom: 0;
+       	  opacity: 0;
        }
        .in{
-       	   transform: scale3d(1,1,1);
+       	   transform-origin: right top;
+           -webkit-transform-origin:  right top;
+       	   transform: scale(0,0);
+       	   opacity: 0;
+       	
+       }
+       .in:hover{
+       	   transform: scale(1,1);
        	   opacity: 1;
        }
+
+       .none{
+       	display: none;
+       }
+       .beforeim{
+       	transform: scale(0,0);
+       	opacity: 0;
+       }
+       .afterim{
+       	transform: scale(1,1);
+       	opacity: 1;
+       }
+        .imgout{
+   	    transition: all 2s; 
+    	-webkit-transition: all 2s;
+      	transform: scale(0,0);
+      	/*width: 0;
+      	height: 0;*/
+   	    opacity: 0;
+   	    transform-origin: left bottom;
+    	-webkit-transform-origin:  left bottom;
+       }
+       .imgin{
+       	   transition: all 2s; 
+        	-webkit-transition: all 2s;
+       	   transform: scale(1,1);
+       	  /*width: 400px;
+       	  height: 200px;*/
+       	   opacity: 1;
+       	   transform-origin: right top;
+           -webkit-transform-origin:  right top;     	
+       }
+       
 		</style>
 		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 		   $(document).ready(function(){
+              //var imgarray =  $(".pic img");
+              var now = $(".pic li").length - 1;
+              $(".pic li").addClass('beforeim');
+              $(".pic li").eq(now).removeClass('beforeim');
+              function lunbo(){          	   
+          	        $(".pic li").removeClass('imgin');
+          	        $(".pic li").removeClass('imgout');
 
-
+              	  	$(".pic li").addClass('beforeim');
+                    $(".pic li").eq(now).removeClass('beforeim');
+              	  	setTimeout(function(){ //这里使用setTimeout的作用是为了让代码停一段时间，再往下执行。不然会有bug        	  		
+		              	if(now >= 0){
+		              	  if(now != 0){
+		              	  	$(".pic li").eq(now).addClass('imgout');
+		              		$(".pic li").eq(now-1).addClass('imgin');
+		              		now--;
+		              	  }
+		              	  else{
+		              	  	$(".pic li").eq(0).addClass('imgout');
+		              	  	$(".pic li").eq($(".pic li").length - 1).addClass('imgin');
+		              	  	now = $(".pic li").length - 1;
+		              	  }
+		              	    
+		              	}
+              	  	},10)
+                }
+              setInterval(lunbo,5000)              
 			});
 		</script>
 		<script type="text/javascript">	
@@ -105,10 +179,10 @@
 	<body>
 		<div id="container">
         <ul class="pic">
-            <!--<li ><a href="javascript:;"><img  src="img/testimg/lunbo1.jpg" alt="pic1"></a></li>
-            <li><a href="javascript:;"><img src="img/testimg/lunbo2.jpg"  alt="pic2"></a></li>
-            <li><a href="javascript:;"><img src="img/testimg/lunbo3.jpg"  alt="pic3"></a></li>-->
-            <li class="out"><a href="javascript:;"><img class="out" src="img/testimg/lunbo1.jpg"  alt="pic1"></a></li><!-- 克隆第一张 -->
+            <li><a href="javascript:;"><img src="img/testimg/lunbo1.jpg" alt="pic1"></a></li>
+            <li><a href="javascript:;"><img src="img/testimg/lunbo2.jpg" alt="pic2"></a></li>
+            <li><a href="javascript:;"><img src="img/testimg/lunbo3.jpg" alt="pic3"></a></li>
+            <li><a href="javascript:;"><img src="img/testimg/lunbo1.jpg" alt="pic1"></a></li><!-- 克隆第一张 -->
             <!--<li><a href="javascript:;"><img src="img/testimg/lunbo2.jpg"  alt="pic2"></a></li>
             <li><a href="javascript:;"><img src="img/testimg/lunbo3.jpg"  alt="pic3"></a></li>-->
         </ul>

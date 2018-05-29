@@ -8,9 +8,44 @@
 		<title>个人博客</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/myanimate.css"/>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		   $(document).ready(function(){
+   
+              //轮播图片start
+              var now = $(".pic li").length - 1;
+              $(".pic li").addClass('beforeim');
+              $(".pic li").eq(now).removeClass('beforeim');
+              function lunbo(){          	   
+          	        $(".pic li").removeClass('imgin');
+          	        $(".pic li").removeClass('imgout');
+
+              	  	$(".pic li").addClass('beforeim');
+                    $(".pic li").eq(now).removeClass('beforeim');
+              	  	setTimeout(function(){ //这里使用setTimeout的作用是为了让代码停一段时间，再往下执行。不然会有bug        	  		
+		              	if(now >= 0){
+		              	  if(now != 0){
+		              	  	$(".pic li").eq(now).addClass('imgout');
+		              		$(".pic li").eq(now-1).addClass('imgin');
+		              		now--;
+		              	  }
+		              	  else{
+		              	  	$(".pic li").eq(0).addClass('imgout');
+		              	  	$(".pic li").eq($(".pic li").length - 1).addClass('imgin');
+		              	  	now = $(".pic li").length - 1;
+		              	  }
+		              	    
+		              	}
+              	  	},10)
+                }
+             setInterval(lunbo,8000);
+              //轮播图片end              
+			});
+		</script>		
 		<style type="text/css">
 			
 		</style>
+		
 	</head>
 	<body>
 		<script color="243,142,40" opacity='0.7' zIndex="-1" count="59" src="js/canvas-nest.js" type="text/javascript" charset="utf-8"></script>
@@ -32,6 +67,15 @@
 					<li><a href="">测试</a></li>
 				</ul>
 			</nav>
+			<div class="lunbo ">
+				 <ul class="pic lunboIn">
+		            <li><a href="javascript:;"><img src="img/my/lunbo1.jpg" alt="pic1"></a></li>
+		            <li><a href="javascript:;"><img src="img/my/lunbo2.jpg" alt="pic1"></a></li>
+		            <li><a href="javascript:;"><img src="img/my/lunbo3.jpg" alt="pic1"></a></li>
+		            <li><a href="javascript:;"><img src="img/my/lunbo4.jpg" alt="pic1"></a></li>
+		            <li><a href="javascript:;"><img src="img/my/lunbo5.jpg" alt="pic1"></a></li>
+		        </ul>
+			</div>
 		</div>
 	</body>
 </html>
