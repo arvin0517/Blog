@@ -38,7 +38,7 @@
 		              	}
               	  	},10)
                 }
-             setInterval(lunbo,8000);
+             //setInterval(lunbo,8000); //循环轮播
               //轮播图片end              
 			});
 		</script>		
@@ -67,7 +67,7 @@
 					<li><a href="">测试</a></li>
 				</ul>
 			</nav>
-			<div class="lunbo ">
+			<div class="lunbo marTop">
 				 <ul class="pic lunboIn">
 		            <li><a href="javascript:;"><img src="img/my/lunbo1.jpg" alt="pic1"></a></li>
 		            <li><a href="javascript:;"><img src="img/my/lunbo2.jpg" alt="pic1"></a></li>
@@ -75,6 +75,13 @@
 		            <li><a href="javascript:;"><img src="img/my/lunbo4.jpg" alt="pic1"></a></li>
 		            <li><a href="javascript:;"><img src="img/my/lunbo5.jpg" alt="pic1"></a></li>
 		        </ul>
+			</div>
+			<div class="barAndcale marTop">
+				<form class="search-form">
+					    <div class="search-bg search-bg-hover"></div>
+						<input type="text" class="search-text" name="" id="" value="" placeholder="请输入你需要的内容"/>
+					    <input type="submit" class="search-btn" name="" id="" value="" />
+				</form>
 			</div>
 		</div>
 	</body>

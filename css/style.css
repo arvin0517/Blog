@@ -4,10 +4,11 @@
 ul{ list-style: none;}
 ul li{ float: left;}
 .none{ display: none;}
+.marTop{ margin-top: 10px;}
 
 body{ background-image: url(../img/my/bd_bg.jpg);background-repeat: no-repeat; background-attachment: fixed; background-position: center top; background-size: cover;width:100%; height: 100%; min-height: 100%; min-width: 320px; font-family: 'Microsoft YaHei';}
 
-.container{ width: 100%; min-height: 960px; max-width: 960px; margin: 0 auto; background-color: transparent; margin-top: 52px; margin-bottom: 52px; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3); padding: 20px;}
+.container{ position: relative; width: 100%; min-height: 960px; max-width: 960px; margin: 0 auto; background-color: transparent; margin-top: 52px; margin-bottom: 52px; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3); padding: 20px;}
 
 /*标题部分start*/
 .container .header{  background-color: transparent; width: 100%; height: 64px;}
@@ -24,19 +25,30 @@ nav ul li{     }
 nav ul li:hover{ }
 nav ul li a{display: inline-block; text-align: center; line-height: 42px;  text-decoration: none; width: 100px; font-size: 15px; text-shadow: #333 1px 1px 1px; color: white; cursor: pointer;}
 nav ul li a.active{ background-color: #018CE9; border-radius: 42px 0; font-weight: bold; }
-nav ul li a:hover{ margin-top: -12px; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3); line-height: 63px; background-color: #018CE9; border-radius: 63px 0 !important; font-weight: bold; width: 150px; height: 63px; transform: rotate(360deg); -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */  }
+nav ul li a:hover{ margin-top: -12px; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3); line-height: 63px; background-color: rgba(245,245,245,0.2); border-radius: 63px 0 !important; font-weight: bold; width: 150px; height: 63px; transform: rotate(360deg); -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */  }
 
 /*导航栏end*/
 
 
 /*轮播start*/
-.lunbo{ position: absolute; float: left; width: 630px;  height: 300px; /*background: rgba(245,245,245,1); */ margin-top: 10px;}
+.lunbo{ position: absolute; float: left; width: 630px;  height: 300px; /*background: rgba(245,245,245,1); */}
 .pic{ padding: 0; margin: 0; list-style: none; position: relative; width: 630px; height: 300px; }
-.pic li{ width: 630px;   height: 300px; position: absolute; box-shadow: 0 4px 10px rgba(100, 100, 100, 0.5); }
+.pic li{ width: 630px;   height: 300px; position: absolute; box-shadow: 0 4px 10px rgba(100, 100, 100, 0.5); /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/ }
 .pic li img{ width: 100%; height: 100%; }
 .beforeim{ transform: scale(0,0); opacity: 0; }
 .imgout{ transition: all 3s;  -webkit-transition: all 3s; transform: scale(0,0); opacity: 0; transform-origin: left bottom; -webkit-transform-origin:  left bottom; }
 .imgin{ transition: all 3s;  -webkit-transition: all 3s; transform: scale(1,1); opacity: 1; transform-origin: right top; -webkit-transform-origin:  right top; }
 /*轮播end*/
+
+
+/*搜索栏和日历视图start*/
+.barAndcale{ position: absolute; right: 20px; /*这里的right值是根据.container的padding值设定的*/  width: 310px; height: 300px; border: 1px solid red; }
+.search-form{ display: table-cell; position: relative; vertical-align: middle; width: 310px;text-align: center; height: 80px; background: rgba(245,245,245,0.2); }
+.search-form .search-text{ margin: auto; background-color: rgba(245, 245, 245, 0.5); border: none; width: 200px; padding: 10px 10px 10px 20px; border-radius: 6px; color: #868686; outline: none; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);}
+.search-form .search-btn{ background-image: url(../img/my/search.png); position: absolute; right: 40px; width: 35px; height: 35px; background-repeat: no-repeat; background-position: center; background-color: transparent; border: none; cursor: pointer; outline: none;}
+.search-form .search-bg{ position: absolute; width: 230px; height: 35px; margin: auto; left: 0; top: 0; right: 0; bottom: 0;  background-color: rgba(245, 245, 245, 0); top: 0; z-index: -1; /*transform: scale(0,0);*/ transition: all 1s; -webkit-transition: all 1s;}
+.search-form:hover .search-bg-hover{ /*transform: scale(1,1);*/ width: 100%; height: 100%; background-color: rgba(245, 245, 245, 0.22);}
+
+/*搜索栏和日历视图end*/
 
 

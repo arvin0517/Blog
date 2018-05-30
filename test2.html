@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$('.div1').click(function(){
+					
+					$('.main').addClass('mained');
+				})
+				
+				$(".div2").click(function(){
+					
+					$('.main').removeClass('mained');
+				})
+				
+			})
+		</script>
+		<style type="text/css">
+			*{ transition: all 1.5s; -webkit-transition: all 1.5s; }
+			.main .div1{ position: absolute; z-index: 2; width: 100px; height: 100px; background-color: aquamarine;}
+			.main .div2{ position: absolute; z-index: 1; width: 100px; height: 100px; background-color: royalblue; transform: rotateY(180deg); opacity: 0;}
+			.mained .div1{ transform: rotateY(180deg); z-index: 1; visibility: hidden; opacity: 0;}
+			.mained .div2{ transform: rotateY(0deg); z-index: 2; visibility: visible; opacity: 1;}
+		</style>
+	</head>
+	<body>
+		<div class="main" id="">
+			<div class="div1">
+				哈哈
+			</div>
+			<div class="div2">
+				渣渣
+			</div>
+		</div>
+		
+	</body>
+</html>

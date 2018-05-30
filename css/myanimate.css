@@ -1,5 +1,5 @@
 
-/*左边淡入*/
+/*左边淡入start*/
 .leftInto
 {
 	position:relative;
@@ -17,8 +17,9 @@
 	from {left: -200px;opacity: 0;}
 	to {left: 0;opacity: 1;}
 }
+/*左边淡入end*/
 
-/*右边淡入*/
+/*右边淡入start*/
 .rightInto
 {
 	position:relative;
@@ -36,10 +37,10 @@
 	from {left: 200px;opacity: 0;}
 	to {left: 0;opacity: 1;}
 }
+/*右边淡入end*/
 
 
-
-/*弹跳进入*/
+/*弹跳进入start*/
 .bounceInto{
 	animation:bounceIn 1.5s;
 	-webkit-animation:bounceIn 1.5s; /* Safari and Chrome */
@@ -76,11 +77,10 @@
     transform: scale3d(1, 1, 1);
   }
 }
-
+/*弹跳进入end*/
 
 
 /*轮播图进入start*/
-
 .lunboIn
 {
 	animation:lunboIn 3s;
@@ -94,5 +94,4 @@
 	33.33333%{left: -700px; opacity: 0; transform: scale3d(0, 0, 0);}
 	to {left: 0; opacity: 1; transform: scale3d(1, 1, 1);}
 }
-
 /*轮播图进入end*/
