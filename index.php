@@ -8,6 +8,9 @@
 		<title>个人博客</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/myanimate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/schedule.css"/>
+		<link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">		
+		<script src="js/schedule.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 		   $(document).ready(function(){
@@ -39,7 +42,28 @@
               	  	},10)
                 }
              //setInterval(lunbo,8000); //循环轮播
-              //轮播图片end              
+              //轮播图片end    
+              
+             //添加日历 
+//        	var mySchedule = new Schedule({
+//				el: '#schedule-box',
+//				//date: '2018-9-20',
+//				clickCb: function (y,m,d) {
+//					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+//				},
+//				nextMonthCb: function (y,m,d) {
+//					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+//				},
+//				nextYeayCb: function (y,m,d) {
+//					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+//				},
+//				prevMonthCb: function (y,m,d) {
+//					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+//				},
+//				prevYearCb: function (y,m,d) {
+//					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+//				}
+//			});          
 			});
 		</script>		
 		<style type="text/css">
@@ -76,13 +100,29 @@
 		            <li><a href="javascript:;"><img src="img/my/lunbo5.jpg" alt="pic1"></a></li>
 		        </ul>
 			</div>
-			<div class="barAndcale marTop">
+			<div class="searchAndQuotes marTop">
 				<form class="search-form">
 					    <div class="search-bg search-bg-hover"></div>
 						<input type="text" class="search-text" name="" id="" value="" placeholder="请输入你需要的内容"/>
 					    <input type="submit" class="search-btn" name="" id="" value="" />
 				</form>
+				<div class="quotes" id="">
+					<div class="quotes-all" id="">
+						<div id="quotes-all2">
+							<span class="quotes-text" id="">
+						   	   苦难有如乌云，远望去但见墨黑一片，然而身临其下时不过是灰色而已。
+						    </span>
+							<span class="quotes-name" id="">
+							   	    ---- by 里希特
+							</span>
+						</div>
+					</div>		  
+				</div>
+				<!--<div class="schedule">
+					<div id='schedule-box' class="boxshaw"> </div>
+				</div>-->
 			</div>
+			
 		</div>
 	</body>
 </html>
