@@ -5,10 +5,13 @@ ul{ list-style: none;}
 ul li{ float: left;}
 .none{ display: none;}
 .marTop{ margin-top: 10px;}
+a{ text-decoration: none;}
+em{ font-style: normal;}
+.clear{ clear: both;}
 
 body{ background-image: url(../img/my/bd_bg.jpg);background-repeat: no-repeat; background-attachment: fixed; background-position: center top; background-size: cover;width:100%; height: 100%; min-height: 100%; min-width: 320px; font-family: 'Microsoft YaHei';}
 
-.container{ position: relative; width: 100%; min-height: 960px; max-width: 960px; margin: 0 auto; background-color: transparent; margin-top: 52px; margin-bottom: 52px; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3); padding: 20px;}
+.container{ position: relative; width: 100%;height: auto; min-height: 960px; max-width: 960px; margin: 0 auto; background-color: transparent; margin-top: 52px; margin-bottom: 52px; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3); padding: 20px;}
 
 /*标题部分start*/
 .container .header{  background-color: transparent; width: 100%; height: 64px;}
@@ -21,9 +24,9 @@ body{ background-image: url(../img/my/bd_bg.jpg);background-repeat: no-repeat; b
 /*导航栏start*/
 nav{ background: rgba(245,245,245,0.2); width: 100%; height: 42px; margin-top: 6px; z-index: 100; position: relative;}
 nav ul{ width: 100%; height: 42px; }
-nav ul li{     }
-nav ul li:hover{ }
-nav ul li a{display: inline-block; text-align: center; line-height: 42px;  text-decoration: none; width: 100px; font-size: 15px; text-shadow: #333 1px 1px 1px; color: white; cursor: pointer;}
+nav ul li{ width: 100px; position: relative; height: 42px; }
+nav ul li:hover{ width: 150px; }
+nav ul li a{ /*position: absolute;*/display: inline-block;  text-align: center; line-height: 42px; font-size: 15px; text-decoration: none; width: 100px;  text-shadow: #333 1px 1px 1px; color: white; cursor: pointer;}
 nav ul li a.active{ background-color: #018CE9; border-radius: 42px 0; font-weight: bold; }
 nav ul li a:hover{ margin-top: -12px; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3); line-height: 63px; background-color: rgba(245,245,245,0.2); border-radius: 63px 0 !important; font-weight: bold; width: 150px; height: 63px; transform: rotate(360deg); -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */  }
 
@@ -41,19 +44,46 @@ nav ul li a:hover{ margin-top: -12px; box-shadow: 0 2px 6px rgba(100, 100, 100, 
 /*轮播end*/
 
 
-/*搜索栏和日历视图start*/
-.searchAndQuotes{ position: absolute; right: 20px; /*这里的right值是根据.container的padding值设定的*/  width: 310px; height: 300px; border: 1px solid red; }
+/*搜索栏和名人名言start*/
+.searchAndQuotes{ position: absolute; right: 20px; /*这里的right值是根据.container的padding值设定的*/  width: 310px; height: 300px; /*border: 1px solid red;*/ }
 .search-form{ display: table-cell; position: relative; vertical-align: middle; width: 310px;text-align: center; height: 80px; background: rgba(245,245,245,0.2); }
 .search-form .search-text{ margin: auto; background-color: rgba(245, 245, 245, 0.5); border: none; width: 200px; padding: 10px 10px 10px 20px; border-radius: 6px; color: #868686; outline: none; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);}
 .search-form .search-btn{ background-image: url(../img/my/search.png); position: absolute; right: 40px; width: 35px; height: 35px; background-repeat: no-repeat; background-position: center; background-color: transparent; border: none; cursor: pointer; outline: none;}
 .search-form .search-bg{ position: absolute; width: 230px; height: 35px; margin: auto; left: 0; top: 0; right: 0; bottom: 0;  background-color: rgba(245, 245, 245, 0); top: 0; z-index: -1; /*transform: scale(0,0);*/ transition: all 1s; -webkit-transition: all 1s;}
 .search-form:hover .search-bg-hover{ /*transform: scale(1,1);*/ width: 100%; height: 100%; background-color: rgba(245, 245, 245, 0.22);}
 
-.quotes{ position: relative;  width: 310px; height: 210px; background: rgba(39, 167, 218, 0.2) margin-top: 10px;}
-.quotes span{ display: block; font-size: 14px; color: white; text-shadow: #333 1px 1px 1px;}
+.quotes{ position: relative;  width: 310px; height: 210px; background: rgba(39, 175, 218, 0.6); margin-top: 10px;}
+.quotes span{ display: block; font-size: 14px; color: white; text-shadow: #333 2px 2px 6px;}
 .quotes .quotes-all{ /*position: absolute;  left: 0; right: 0; top: 0; bottom: 0; margin: auto;*/ display: table-cell; vertical-align: middle; /*text-align: center;*/ width: 310px; height: 210px; padding: 0 26px;  }
 .quotes .quotes-all2{ }/* 这个div单纯是为了让  .quotes-all 的 display: table-cell 有用*/
 .quotes .quotes-text{ padding-bottom: 10px; }
 .quotes .quotes-name{ text-align: right; }
+.quotesClear{ width: 100%;height: 300px; clear: both;  } /*因为上面的div都设置成了绝对位置,不占据空间,所以需要一个div来占据空间,不然下面的div会和上面的div重叠*/
 /*搜索栏和日历视图end*/
 
+/*苦难有如乌云，远望去但见墨黑一片，然而身临其下时不过是灰色而已。 里希特*/
+
+/*倘若你想达成目标，便得在心中描绘出目标达成后的景象；那么，梦想必会成真。——英国当代动机大师 理查丹尼*/
+
+/*不因幸运而固步自封，不因厄运而一蹶不振。真正的强者，善于从顺境中找到阴影，从逆境中找到光亮，时时校准自己前进的目标。——易卜生*/
+
+/*要冒一险！整个生命就是一场冒险，走得最远的人常是愿意去做、愿意去冒险的人。*/
+
+/*不因幸运而固步自封，不因厄运而一蹶不振。真正的强者，善于从顺境中找到阴影，从逆境中找到光亮，时时校准自己前进的目标。——易卜生*/
+
+ /*有时候,你需要出去走一走,呼吸一下新鲜空气,然后提醒自己,你是谁,你要成为什么样的人.*/
+
+/*文章和右边部分start*/
+.bottom{ width: 100%;height: auto; min-height: 500px; background: rgba(61, 189, 204, 0.5); clear: both; }
+.articles{ width: 630px; height: auto; min-height: 500px; /*background: rgba(245, 245, 245, 0.52);*/}
+.articles-title{ width: calc(100% - 10px); height: 34px; background: rgba(245,245,245,0.2); text-shadow: #333 1px 1px 1px; box-shadow: 0px 2px 4px rgba(100, 100, 100,0.3); line-height: 34px; font-size: 15px; color: white; padding: 0 0 0 10px; margin-bottom: 10px;}
+.article-list{ width: 100%; height: auto; display: inline-block; }
+.article-list li{ width: calc(100% - 30px); margin-bottom: 18px; height: 150px; background: rgba(245, 245, 245, 0.6); padding: 20px 15px; box-shadow: 2px 4px 6px rgba(100, 100, 100,0.3);}
+.article-list li img{ height: 100%; width: 200px; float: left;}
+.article-list li .article-main{ height: 100%; width: 390px; float: right; }    
+.article-list li .article-main h3{ padding: 10px 0;  font-size: 16px; }
+.article-list li .article-main h3 a{ color: #3d3d3d; }
+.article-list li .article-main .article-info span{ display: block; float: left; }
+.article-list li .article-main .article-info span a{ color: #838383; padding-right: 18px; font-size: 14px;}
+.article-list li .article-main .article-p{ color: #526163; height: 76px; overflow: hidden; font-size: 14px; padding: 8px 12px 3px 0px; text-indent:20px;}
+/*文章和右边部分end*/
