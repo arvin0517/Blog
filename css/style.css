@@ -74,9 +74,11 @@ nav ul li a:hover{ margin-top: -12px; box-shadow: 0 2px 6px rgba(100, 100, 100, 
  /*有时候,你需要出去走一走,呼吸一下新鲜空气,然后提醒自己,你是谁,你要成为什么样的人.*/
 
 /*文章和右边部分start*/
-.bottom{ width: 100%;height: auto; min-height: 500px; background: rgba(61, 189, 204, 0.5); clear: both; }
-.articles{ width: 630px; height: auto; min-height: 500px; /*background: rgba(245, 245, 245, 0.52);*/}
-.articles-title{ width: calc(100% - 10px); height: 34px; background: rgba(245,245,245,0.2); text-shadow: #333 1px 1px 1px; box-shadow: 0px 2px 4px rgba(100, 100, 100,0.3); line-height: 34px; font-size: 15px; color: white; padding: 0 0 0 10px; margin-bottom: 10px;}
+.bottom{ width: 100%;height: auto; min-height: 500px; /*background: rgba(61, 189, 204, 0.5);*/ clear: both; }
+
+/*文章start*/
+.articles{ float: left; width: 630px; height: auto; min-height: 500px; /*background: rgba(245, 245, 245, 0.52);*/}
+.articles-title{ width: calc(100% - 10px); height: 34px; background: rgba(245,245,245,0.4); text-shadow: #333 1px 1px 1px; box-shadow: 0px 2px 4px rgba(100, 100, 100,0.3); line-height: 34px; font-size: 15px; color: white; padding: 0 0 0 10px; margin-bottom: 10px;}
 .article-list{ width: 100%; height: auto; display: inline-block; }
 .article-list li{ width: calc(100% - 30px); margin-bottom: 18px; height: 150px; background: rgba(245, 245, 245, 0.6); padding: 20px 15px; box-shadow: 2px 4px 6px rgba(100, 100, 100,0.3);}
 .article-list li img{ height: 100%; width: 200px; float: left;}
@@ -86,4 +88,10 @@ nav ul li a:hover{ margin-top: -12px; box-shadow: 0 2px 6px rgba(100, 100, 100, 
 .article-list li .article-main .article-info span{ display: block; float: left; }
 .article-list li .article-main .article-info span a{ color: #838383; padding-right: 18px; font-size: 14px;}
 .article-list li .article-main .article-p{ color: #526163; height: 76px; overflow: hidden; font-size: 14px; padding: 8px 12px 3px 0px; text-indent:20px;}
+/*文章end*/
+
+/*右边部分start*/
+.bottom-right{ float: right; width: 310px;}
+/*右边部分end*/
+
 /*文章和右边部分end*/

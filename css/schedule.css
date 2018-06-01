@@ -1,6 +1,6 @@
 		*{ margin: 0; padding: 0; }
 		ul{ list-style: none; }
-		#schedule-box{ width: 100%; margin: 0 auto; /*padding: 35px 20px;*/ font-size: 13px; }
+		#schedule-box{ width: 100%; margin: 0 auto; /*padding: 35px 20px;*/ font-size: 13px; /*background: rgba(255, 254, 254, 0.5);*/ background: rgba(236, 236, 239, 0.5); }
 		.schedule-hd{ display: flex; justify-content: space-between; padding: 0 15px; }
 		.today{ flex: 1; text-align: center; }
 		.ul-box{ overflow: hidden; }
@@ -9,17 +9,32 @@
 		.current-month{ color: #333333; }
 		.today-style{ border-radius: 50%; background: #58d321; }
 		.arrow{ cursor: pointer; }
-		.dayStyle{ display: inline-block; width: 35px; height: 35px; border-radius: 50%; text-align: center; line-height: 35px; cursor: pointer; }
-		.current-month > .dayStyle:hover{ background: #00BDFF; color: #ffffff; }
-		.today-flag{ background: #00C2B1; color: #fff; }
-		.boxshaw{ box-shadow: 2px 2px 15px 2px #e3e3e3; }
+		.dayStyle{ display: inline-block; width: 35px; height: 35px; border-radius: 50%; text-align: center; line-height: 35px; cursor: pointer;  }
+		
+		.today-flag{ /*background: #00C2B1;*/ /*color: #fff;*/ box-shadow: 2px 2px 20px rgba(0, 160, 250, 0.6) inset; }
+		.boxshaw{ box-shadow: 2px 4px 6px rgba(100, 100, 100,0.3); }
 		.selected-style { background: #00BDFF; color: #ffffff; }
 		#h3Ele{ text-align: center; padding: 10px; }
+		.current-month > .dayStyle:hover{ background: #00BDFF; color: #ffffff;
+		}
 		
+		
+		.schedule:hover #schedule-box{ background: none;}
+		.schedule:hover .schedule-hd{ background: rgba(236, 236, 239, 0.82); text-shadow: #999999 1px 1px 1px; }
+		.schedule:hover .week-ul{ background: rgba(236, 236, 239, 0.82); }
+		.schedule:hover .ul-box > li{ overflow: hidden; color: rgb(60, 187, 246); text-shadow: #999999 1px 1px 1px; }
+		.schedule:hover .dayStyle{
+			
+			background: rgba(236, 236, 239, 0.82);
+    color: rgb(60, 187, 246); text-shadow: 0px 1px 1px rgba(250, 250, 250, 0.6); border-radius: 3px 3px 3px 3px; cursor: pointer; box-shadow: 02px 2px 4px rgba(0, 0, 0, 0.2);}
+		
+		
+		.schedule:hover .today-flag{ /*background: #00C2B1;*/ /*color: #fff;*/ box-shadow: 2px 2px 20px rgba(0, 160, 250, 0.6) inset; }
 
-
-
-
+        .schedule:hover .current-month > .dayStyle:hover{ box-shadow: 2px 2px 20px rgba(0, 160, 250, 0.6) inset;
+		}
+        
+        .schedule:hover .today{ color: rgb(60, 187, 246); text-shadow: #f7f7f7 2px 2px 2px; }
 
 
 

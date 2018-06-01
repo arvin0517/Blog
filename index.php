@@ -41,29 +41,29 @@
 		              	}
               	  	},10)
                 }
-             setInterval(lunbo,8000); //循环轮播
+             //setInterval(lunbo,8000); //循环轮播
               //轮播图片end    
               
              //添加日历 
-//        	var mySchedule = new Schedule({
-//				el: '#schedule-box',
-//				//date: '2018-9-20',
-//				clickCb: function (y,m,d) {
-//					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
-//				},
-//				nextMonthCb: function (y,m,d) {
-//					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
-//				},
-//				nextYeayCb: function (y,m,d) {
-//					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
-//				},
-//				prevMonthCb: function (y,m,d) {
-//					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
-//				},
-//				prevYearCb: function (y,m,d) {
-//					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
-//				}
-//			});          
+          	var mySchedule = new Schedule({
+				el: '#schedule-box',
+				//date: '2018-9-20',
+				clickCb: function (y,m,d) {
+					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+				},
+				nextMonthCb: function (y,m,d) {
+					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+				},
+				nextYeayCb: function (y,m,d) {
+					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+				},
+				prevMonthCb: function (y,m,d) {
+					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+				},
+				prevYearCb: function (y,m,d) {
+					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+				}
+			});          
 			});
 		</script>		
 		<style type="text/css">
@@ -83,12 +83,12 @@
 			</div>
 			<nav class="bounceInto">
 				<ul>
-					<li><a class="active" href="">技术博文</a></li>
+					<li><a class="active" href="">首页</a></li>
+					<li><a href="">技术博文</a></li>
 					<li><a href="">前端作品</a></li>
 					<li><a href="">碎碎念</a></li>
 					<li><a href="">留言板</a></li>
-					<li><a href="">关于我</a></li>
-					<li><a href="">测试</a></li>
+					<li><a href="">关于我</a></li>				
 				</ul>
 			</nav>
 			<div class="lunbo marTop">
@@ -118,9 +118,7 @@
 						</div>
 					</div>		  
 				</div>
-				<!--<div class="schedule">
-					<div id='schedule-box' class="boxshaw"> </div>
-				</div>-->
+				
 			</div>
 			<div class="quotesClear marTop" id=""></div>
 			<div class="bottom marTop">
@@ -190,6 +188,14 @@
 							</div>
 						</li>
 					</ul>					
+				</div>
+				<div class="bottom-right">
+					<div class="schedule">
+						<div id='schedule-box' class="boxshaw"> </div>
+					</div>
+				</div>
+				<div class="clear">
+					
 				</div>
 			</div>
 			
