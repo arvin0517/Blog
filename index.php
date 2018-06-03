@@ -75,7 +75,7 @@
 		<script color="243,142,40" opacity='0.7' zIndex="-1" count="59" src="js/canvas-nest.js" type="text/javascript" charset="utf-8"></script>
 		<div id="container" class="container">
 			<div class="header">
-			   <img class="header_logo float-l leftInto" src="img/my/logo.png"/>
+			   <img class="header_logo float-l leftInto" src="img/my/logo2.png"/>
 			   <div class="header_text float-l rightInto" id="">
 				   <div id="" class="title">本的个人博客</div>
 				   <div id="" class="description">一个懒人不想做但不得不做的博客</div>			   	
