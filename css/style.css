@@ -96,12 +96,17 @@ nav ul li a:hover{ margin-top: -12px; box-shadow: 0 2px 6px rgba(100, 100, 100, 
 
 /*四个方格start*/
 .four-squares{ width: 310px; /*height: 300px;*/ /*background: rgba(244,244,244,1);*/ float: right; margin-top: 10px;}
-.four-squares .child-squares{ width: 150px; height: 86px; line-height: 86px; float: left; background: red; text-align: center; margin-bottom: 10px; font-size: 14px; color: white; box-shadow: 2px 4px 6px rgba(100, 100, 100,0.3); opacity: 0.8; }
+.four-squares .child-squares{ width: 150px; height: 86px; line-height: 86px; float: left; background: red; text-align: center; margin-bottom: 10px; font-size: 14px; color: white; box-shadow: 2px 4px 6px rgba(100, 100, 100,0.3); opacity: 0.8; position: relative; }
 .four-squares .child-squares:nth-child(odd){ margin-right: 10px;}
 .four-squares .child-squares:nth-child(1){ background: #e7769e; }
 .four-squares .child-squares:nth-child(2){ background: #ff9900; }
 .four-squares .child-squares:nth-child(3){ background: #f16e50; }
 .four-squares .child-squares:nth-child(4){ background: #71a532; }
+
+.four-squares .child-squares .child_bg_top{ background: rgba(244,244,244,0.5); position: absolute; width: 150px; height: 86px; left: 0;top:-86px; /*transition: all 0.5s; -webkit-transition: all 0.5s;*/ }
+.four-squares .child-squares .child_bg_right{ background: rgba(244,244,244,0.5); position: absolute; width: 150px; height: 86px; left: 150px; top: 0; /*transition: all 0.5s; -webkit-transition: all 0.5s;*/ }
+.four-squares .child-squares .child_bg_bottom{ background: rgba(244,244,244,0.5); position: absolute; width: 150px; height: 86px; left: 0; top:86px; /*transition: all 0.5s; -webkit-transition: all 0.5s;*/ }
+.four-squares .child-squares .child_bg_left{ background: rgba(244,244,244,0.5); position: absolute; width: 150px; height: 86px; left: -150px; top: 0; /*transition: all 0.5s; -webkit-transition: all 0.5s;*/ }
 /*四个方格end*/
 
 /*文章和右边部分end*/

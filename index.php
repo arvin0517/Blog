@@ -63,7 +63,51 @@
 				prevYearCb: function (y,m,d) {
 					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
 				}
-			});          
+			}); 
+			
+			//四个小方块
+			 $(".child_test").bind("mouseenter mouseleave",function(e) {  
+                   var w = $(this).width();  
+                   var h = $(this).height();  
+                   var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);  
+                   var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
+                    debugger;  
+                   var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4; //direction的值为“0,1,2,3”分别对应着“上，右，下，左”  
+                   var eventType = e.type;  
+                   var dirName = new Array('top','right','down','left');  //0 1 2 3
+                   console.log('direction:' + direction);
+                  
+                   if(e.type == 'mouseenter'){  //移入
+                      //$(".advanttage-item").html(dirName[direction]+'进入');
+                      if(direction == 0){ //top
+                      	$(this).children('.child_bg').addClass('child_bg_top');
+                      	$(this).children('.child_bg_top').top = 0;
+                      }
+                      else if(direction == 1){ //right
+                      	
+                      }
+                      else if(direction == 2){ //bottom
+                      	
+                      }
+                      else if(direction == 3){  //left
+                      	
+                      }
+                  }else{  //移出
+                      //$('.advanttage-item').html(dirName[direction]+'离开');
+                      if(direction == 0){      //top
+                      	
+                      }
+                      else if(direction == 1){ //right
+                      	
+                      }
+                      else if(direction == 2){ //bottom
+                      	
+                      }
+                      else if(direction == 3){  //left
+                      	
+                      }  
+                  }  
+              });          
 			});
 		</script>		
 		<style type="text/css">
@@ -195,10 +239,10 @@
 					</div>
 				</div>
 				<div class="four-squares">
-					<a href="" class="child-squares">相册</a>
-					<a href="" class="child-squares">大雪中</a>
-					<a href="" class="child-squares">随笔</a>
-					<a href="" class="child-squares">碎碎念</a>
+					<a href="" class="child-squares child_test"><div class="child_bg"></div>相册</a>
+					<a href="" class="child-squares"><div class="child_bg"></div>大雪中</a>
+					<a href="" class="child-squares"><div class="child_bg"></div>随笔</a>
+					<a href="" class="child-squares"><div class="child_bg"></div>碎碎念</a>
 				</div>
 				<div class="clear"></div>
 			</div>
