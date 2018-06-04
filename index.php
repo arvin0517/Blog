@@ -194,9 +194,13 @@
 						<div id='schedule-box' class="boxshaw"> </div>
 					</div>
 				</div>
-				<div class="clear">
-					
+				<div class="four-squares">
+					<a href="" class="child-squares">相册</a>
+					<a href="" class="child-squares">大雪中</a>
+					<a href="" class="child-squares">随笔</a>
+					<a href="" class="child-squares">碎碎念</a>
 				</div>
+				<div class="clear"></div>
 			</div>
 			
 		</div>
