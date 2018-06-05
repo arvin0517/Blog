@@ -9,9 +9,10 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/myanimate.css"/>
 		<link rel="stylesheet" type="text/css" href="css/schedule.css"/>
-		<link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">		
+		<link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">	
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>	
 		<script src="js/schedule.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mouseDirection.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 		   $(document).ready(function(){
    
@@ -41,10 +42,10 @@
 		              	}
               	  	},10)
                 }
-             //setInterval(lunbo,8000); //循环轮播
+              //setInterval(lunbo,8000); //循环轮播
               //轮播图片end    
               
-             //添加日历 
+             //添加日历start 
           	var mySchedule = new Schedule({
 				el: '#schedule-box',
 				//date: '2018-9-20',
@@ -63,52 +64,78 @@
 				prevYearCb: function (y,m,d) {
 					//document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
 				}
-			}); 
+			});//添加日历end
+			 
 			
-			//四个小方块
-			 $(".child_test").bind("mouseenter mouseleave",function(e) {  
-                   var w = $(this).width();  
-                   var h = $(this).height();  
-                   var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);  
-                   var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
-                    debugger;  
-                   var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4; //direction的值为“0,1,2,3”分别对应着“上，右，下，左”  
-                   var eventType = e.type;  
-                   var dirName = new Array('top','right','down','left');  //0 1 2 3
-                   console.log('direction:' + direction);
-                  
-                   if(e.type == 'mouseenter'){  //移入
-                      //$(".advanttage-item").html(dirName[direction]+'进入');
-                      if(direction == 0){ //top
-                      	$(this).children('.child_bg').addClass('child_bg_top');
-                      	$(this).children('.child_bg_top').top = 0;
-                      }
-                      else if(direction == 1){ //right
-                      	
-                      }
-                      else if(direction == 2){ //bottom
-                      	
-                      }
-                      else if(direction == 3){  //left
-                      	
-                      }
-                  }else{  //移出
-                      //$('.advanttage-item').html(dirName[direction]+'离开');
-                      if(direction == 0){      //top
-                      	
-                      }
-                      else if(direction == 1){ //right
-                      	
-                      }
-                      else if(direction == 2){ //bottom
-                      	
-                      }
-                      else if(direction == 3){  //left
-                      	
-                      }  
-                  }  
-              });          
-			});
+			
+			//四个小方块的背景方块滑入滑出start
+	        $('.child-squares').each(function () {
+		        new MouseDirection(this, {
+		            enter: function ($element, dir) {
+                      //console.log(dir + '进入');
+                      if(dir == 'top'){ //top
+                      	    $element.children('.child_bg').removeClass('child_trans'); //每次进入前先把.child_trans类移除掉，以免后面调整位置的时候也产生过渡效果
+                      	    $element.children('.child_bg').css({ left: '0',top: '-86px' });                    	    
+                      	    setTimeout(function(){
+		                      	$element.children('.child_bg').addClass('child_trans');  //启用过渡        
+                      	    },10);
+	                      	//debugger;	                      	
+	                      	setTimeout(function(){	    // 使代码先停顿一会，再往下执行                     		
+	                      		$element.children('.child_bg').css({ top: '0' });
+	                      	},10)
+	                      	
+	                      }
+	                      else if(dir == 'right'){ //right                      	
+	                      	$element.children('.child_bg').removeClass('child_trans'); //每次进入前先把.child_trans类移除掉，以免后面调整位置的时候也产生过渡效果
+	                      	$element.children('.child_bg').css({ left: '150px',top: '0' });
+	                      	setTimeout(function(){
+	                      	    $element.children('.child_bg').addClass('child_trans');  //启用过渡                      	    
+                      	    },10);	                      	
+	                      	setTimeout(function(){	   // 使代码先停顿一会，再往下执行                     		
+	                      		$element.children('.child_bg').css({ left: '0' });
+	                      	},10)
+	                      }
+	                      else if(dir == 'bottom'){ //bottom
+	                      	$element.children('.child_bg').removeClass('child_trans'); //每次进入前先把.child_trans类移除掉，以免后面调整位置的时候也产生过渡效果
+	                      	$element.children('.child_bg').css({ left: '0',top: '86px' });
+	                      	setTimeout(function(){
+	                      	    $element.children('.child_bg').addClass('child_trans');  //启用过渡                       	    
+                      	    },10);
+	                      	
+	                      	setTimeout(function(){	  // 使代码先停顿一会，再往下执行                    		
+	                      		$element.children('.child_bg').css({ top: '0' });
+	                      	},10)
+	                      }
+	                      else if(dir == 'left'){  //left
+	                      	$element.children('.child_bg').removeClass('child_trans'); //每次进入前先把.child_trans类移除掉，以免后面调整位置的时候也产生过渡效果
+	                      	$element.children('.child_bg').css({ left: '-150px',top: '0' });
+	                      	setTimeout(function(){
+	                      	    $element.children('.child_bg').addClass('child_trans');  //启用过渡                   	    
+                      	    },10);
+	                      	setTimeout(function(){	   // 使代码先停顿一会，再往下执行                     		
+	                      		$element.children('.child_bg').css({ left: '0' });
+	                      	},10)
+	                      }
+		            },
+		            leave: function ($element, dir) {
+                      //console.log(dir + '离开');
+                      if(dir == 'top'){ //top
+	                      	$element.children('.child_bg').css({ top: '-86px' });
+	                      }
+	                      else if(dir == 'right'){ //right
+	                      	$element.children('.child_bg').css({ left: '150px' });
+	                      }
+	                      else if(dir == 'bottom'){ //bottom
+	                      	$element.children('.child_bg').css({ top: '86px' });
+	                      }
+	                      else if(dir == 'left'){  //left
+	                      	$element.children('.child_bg').css({ left: '-150px' });
+	                      }
+		            }
+		        });
+		    });//四个小方块的背景方块滑入滑出end        
+		      
+			});//结束
 		</script>		
 		<style type="text/css">
 			
@@ -239,10 +266,30 @@
 					</div>
 				</div>
 				<div class="four-squares">
-					<a href="" class="child-squares child_test"><div class="child_bg"></div>相册</a>
-					<a href="" class="child-squares"><div class="child_bg"></div>大雪中</a>
-					<a href="" class="child-squares"><div class="child_bg"></div>随笔</a>
-					<a href="" class="child-squares"><div class="child_bg"></div>碎碎念</a>
+					<a href="" class="child-squares child_test"><div class="child_bg"  ></div>相册</a>
+					<a href="" class="child-squares"><div class="child_bg"  ></div>大雪中</a>
+					<a href="" class="child-squares"><div class="child_bg"  ></div>随笔</a>
+					<a href="" class="child-squares"><div class="child_bg"  ></div>在途中</a>
+				</div>
+				<div class="bolg_info">
+					<div class="myinfo">
+						<div class="myinfo_all">
+							<ul class="myinfo_left">
+								<li>姓名：</li>
+								<li>职业：</li>
+								<li>主页：</li>
+								<li>籍贯：</li>
+								<li>目前：</li>
+							</ul>
+							<ul class="myinfo_right">
+								<li>郑玮</li>
+								<li>学生</li>
+								<li>weiwei.com</li>
+								<li>广东揭阳</li>
+								<li>想养只二哈</li>
+							</ul>
+						</div>						
+					</div>
 				</div>
 				<div class="clear"></div>
 			</div>

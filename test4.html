@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mouseDirection.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){				
+//                  $('#test3').each(function () {
+//				        new MouseDirection(this, {
+//				            enter: function ($element, dir) {
+//				                //每次进入前先把.trans类移除掉，以免后面调整位置的时候也产生过渡效果
+//				                var $content = $element.find('.content').removeClass('trans');
+//				                //调整位置
+//				                $content.css(DIR_POS[dir]);
+//				                //reflow
+//				                $content[0].offsetWidth;
+//				                //启用过渡
+//				                $content.addClass('trans');
+//				                //滑入
+//				                $content.css({left: '0', top: '0'});
+//				            },
+//				            leave: function ($element, dir) {
+//				                $element.find('.content').css(DIR_POS[dir]);
+//				            }
+//				        });
+//				    });
+                  new MouseDirection( $('#test3'), {
+                  	
+                  	enter: function($element, dir){
+                  		
+                  		 console.log( dir + '进入');
+                  	},
+                  	
+                  	leave: function($element, dir){
+                  		
+                  		console.log( dir + '离开');                  		
+                  	}
+	
+                  })
+
+			});			   
+		</script>
+		<style type="text/css">
+			div{
+				
+				width: 200px;
+				height: 200px;
+				margin: 100px auto;
+				border: 1px solid royalblue;
+			}
+		</style>
+	</head>
+	<body>
+	
+	 <div id="test3">
+			
+		</div>
+	</body>
+</html>

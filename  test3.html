@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+			 $("#test3").bind("mouseenter mouseleave",function(e) {  
+			           var w = $(this).width();  
+			           var h = $(this).height();  
+			           var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);  
+			           var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);  
+			           var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4; //direction的值为“0,1,2,3”分别对应着“上，右，下，左”  
+			           var eventType = e.type;  
+			           var dirName = new Array('top','right','down','left');
+			           debugger;
+			           if(e.type == 'mouseenter'){  
+			              $("#test3").html(dirName[direction]+'进入');  
+			          }else{  
+			              $('#test3').html(dirName[direction]+'离开');  
+			          }  
+			      }); 
+			});
+			
+		</script>
+		<style type="text/css">
+			div{
+				
+				width: 200px;
+				height: 200px;
+				margin: 100px auto;
+				border: 1px solid royalblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="test3">
+			
+		</div>
+	</body>
+</html>
