@@ -110,13 +110,13 @@ nav ul li a:hover{ margin-top: -12px; box-shadow: 0 2px 6px rgba(100, 100, 100, 
 
 /*博主信息start*/
 .bolg_info{ float: right; width: 310px; height: 230px; background: rgba(255, 182, 60,0.8); position: relative;}
-.bolg_info .myinfo{ position: absolute; width: 310px; height: 230px; color: white; font-size: 14px; display: table-cell; vertical-align: middle; }
+.bolg_info .myinfo{ /*position: absolute;*/  width: 310px; height: 230px; color: white; font-size: 14px; display: table-cell; vertical-align: middle; }
 
-.bolg_info .myinfo .myinfo_all{ width: 310px; height: auto; display: inline-block; position: absolute; /*top: 0; left: 0; right: 0; bottom: 0; margin: auto;*/}
+.bolg_info .myinfo .myinfo_all{ width: 100%; height: auto; display: inline-block; /*position: absolute;*/ /*top: 0; left: 0; right: 0; bottom: 0; margin: auto;*/}
 .bolg_info .myinfo ul{ width: 50%; float: left; } 
 .bolg_info .myinfo .myinfo_left{ text-align: right; padding-right: 4px; width: calc(50% - 4px);}
 .bolg_info .myinfo .myinfo_right{ text-align: left;}
-.bolg_info .myinfo ul li{ float: none;}
+.bolg_info .myinfo ul li{ float: none; padding: 4px 0; text-shadow: #333 2px 2px 4px;}
 /*博主信息end*/
 
 /*文章和右边部分end*/
