@@ -95,3 +95,39 @@
 	to {left: 0; opacity: 1; transform: scale3d(1, 1, 1);}
 }
 /*轮播图进入end*/
+
+/*搜索栏和名言进入start*/
+.searchAndQuotesIn
+{
+	animation:searchAndQuotesIn 3s;
+	-webkit-animation:searchAndQuotesIn 3s; /* Safari and Chrome */
+	/*animation-delay:2s;
+    -webkit-animation-delay:2s; /* Safari 和 Chrome */*/
+}
+@keyframes searchAndQuotesIn{
+		
+	from{ right: -370px; opacity: 0; transform: scale3d(0, 0, 0);}
+	33.33333%{ right: -370px; opacity: 0; transform: scale3d(0, 0, 0);}
+	to {right: 20px; opacity: 1; transform: scale3d(1, 1, 1);}
+}
+/*搜索栏和名言进入end*/
+
+/*最底下部分进入start*/
+.bottomIn
+{
+	position: relative;
+	animation:bottomIn 3s;
+	-webkit-animation:bottomIn 3s; /* Safari and Chrome */
+	animation-delay:3s;
+    -webkit-animation-delay:3s;  /*Safari 和 Chrome*/
+    transform: scale3d(0, 1, 1);
+   animation-fill-mode:forwards; 
+   -webkit-animation-fill-mode:forwards; /* Safari 和 Chrome */
+}
+@keyframes bottomIn{
+		
+	from{ bottom: -540px; opacity: 0;transform: scale3d(0, 1, 1); }
+	/*33.33333%{ right: -370px; opacity: 0; }*/
+	to {bottom: 0; opacity: 1;transform: scale3d(1, 1, 1); }
+}
+/*最底下部分进入end*/

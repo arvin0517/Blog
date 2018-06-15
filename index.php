@@ -6,6 +6,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>个人博客</title>
+		<link rel="shortcut icon" href="img/my/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/myanimate.css"/>
 		<link rel="stylesheet" type="text/css" href="css/schedule.css"/>
@@ -42,7 +43,7 @@
 		              	}
               	  	},10)
                 }
-              //setInterval(lunbo,8000); //循环轮播
+              setInterval(lunbo,8000); //循环轮播
               //轮播图片end    
               
              //添加日历start 
@@ -171,7 +172,7 @@
 		            <li><a href="javascript:;"><img src="img/my/lunbo5.jpg" alt="pic1"></a></li>
 		        </ul>
 			</div>
-			<div class="searchAndQuotes marTop">
+			<div class="searchAndQuotes marTop searchAndQuotesIn">
 				<form class="search-form">
 					    <div class="search-bg search-bg-hover"></div>
 						<input type="text" class="search-text" name="" id="" value="" placeholder="请输入你需要的内容"/>
@@ -188,11 +189,10 @@
 							</span>
 						</div>
 					</div>		  
-				</div>
-				
+				</div>			
 			</div>
 			<div class="quotesClear marTop" id=""></div>
-			<div class="bottom marTop">
+			<div class="bottom marTop bottomIn">
 				<div class="articles">
 					<div class="articles-title">
 						文章推荐
@@ -264,33 +264,103 @@
 					<div class="schedule">
 						<div id='schedule-box' class="boxshaw"> </div>
 					</div>
-				</div>
-				<div class="four-squares">
-					<a href="" class="child-squares child_test"><div class="child_bg"  ></div>相册</a>
-					<a href="" class="child-squares"><div class="child_bg"  ></div>大雪中</a>
-					<a href="" class="child-squares"><div class="child_bg"  ></div>随笔</a>
-					<a href="" class="child-squares"><div class="child_bg"  ></div>在途中</a>
-				</div>
-				<div class="bolg_info">
-					<div class="myinfo">
-						<div class="myinfo_all">
-							<ul class="myinfo_left">
-								<li>姓名：</li>
-								<li>职业：</li>
-								<li>主页：</li>
-								<li>籍贯：</li>
-								<li>目前：</li>
-							</ul>
-							<ul class="myinfo_right">
-								<li>郑玮</li>
-								<li>学生</li>
-								<li>weiwei.com</li>
-								<li>广东揭阳</li>
-								<li>想养只二哈</li>
-							</ul>
-						</div>						
+					<div class="four-squares">
+						<a href="" class="child-squares child_test"><div class="child_bg"  ></div>相册</a>
+						<a href="" class="child-squares"><div class="child_bg"  ></div>大雪中</a>
+						<a href="" class="child-squares"><div class="child_bg"  ></div>随笔</a>
+						<a href="" class="child-squares"><div class="child_bg"  ></div>在途中</a>
 					</div>
+					<div class="bolg_info">
+						<div class="myinfo">
+							<div class="myinfo_all">
+								<ul class="myinfo_left">
+									<li>姓名：</li>
+									<li>职业：</li>
+									<li>主页：</li>
+									<li>籍贯：</li>
+									<li>目前：</li>
+								</ul>
+								<ul class="myinfo_right">
+									<li>郑玮</li>
+									<li>学生</li>
+									<li>weiwei.com</li>
+									<li>广东揭阳</li>
+									<li>想养只二哈</li>
+								</ul>
+								<img class="myinfo_all_img" src="img/my/erha.jpg"/>
+							</div>						
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="popularArticles marTop">
+                	   <div class="articles-title">点击排行</div>
+                	   <div class="popularArticles_all">
+                	   	  <a class="popularArticles_son" href="">
+                	   	  	<div class="son_xuhao son_xuhao_top3" id="">1</div>
+                	   	  	<div class="son_titile">
+                	   	  		如何选择更适合你的 Linux 发行版？如何选择更适合你的 Linux 发行版？
+                	   	  	</div>
+                	   	  </a>
+                	   	  <a class="popularArticles_son" href="">
+                	   	  	<div class="son_xuhao son_xuhao_top3" id="">2</div>
+                	   	  	<div class="son_titile">
+                	   	  		如何选择更适合你的 Linux 发行版？如何选择更适合你的 Linux 发行版？
+                	   	  	</div>
+                	   	  </a>
+                	   	  <a class="popularArticles_son" href="">
+                	   	  	<div class="son_xuhao son_xuhao_top3" id="">3</div>
+                	   	  	<div class="son_titile">
+                	   	  		如何选择更适合你的 Linux 发行版？如何选择更适合你的 Linux 发行版？
+                	   	  	</div>
+                	   	  </a>
+                	   	  <a class="popularArticles_son" href="">
+                	   	  	<div class="son_xuhao" id="">4</div>
+                	   	  	<div class="son_titile">
+                	   	  		如何选择更适合你的 Linux 发行版？如何选择更适合你的 Linux 发行版？
+                	   	  	</div>
+                	   	  </a>
+                	   	  <a class="popularArticles_son" href="">
+                	   	  	<div class="son_xuhao" id="">5</div>
+                	   	  	<div class="son_titile">
+                	   	  		如何选择更适合你的 Linux 发行版？如何选择更适合你的 Linux 发行版？
+                	   	  	</div>
+                	   	  </a>
+                	   	  <a class="popularArticles_son" href="">
+                	   	  	<div class="son_xuhao" id="">6</div>
+                	   	  	<div class="son_titile">
+                	   	  		如何选择更适合你的 Linux 发行版？如何选择更适合你的 Linux 发行版？
+                	   	  	</div>
+                	   	  </a>
+                	   	  <a class="popularArticles_son" href="">
+                	   	  	<div class="son_xuhao" id="">7</div>
+                	   	  	<div class="son_titile">
+                	   	  		如何选择更适合你的 Linux 发行版？如何选择更适合你的 Linux 发行版？
+                	   	  	</div>
+                	   	  </a>
+                	   	  <a class="popularArticles_son" href="">
+                	   	  	<div class="son_xuhao" id="">8</div>
+                	   	  	<div class="son_titile">
+                	   	  		如何选择更适合你的 Linux 发行版？如何选择更适合你的 Linux 发行版？
+                	   	  	</div>
+                	   	  </a>
+                	   	  <a class="popularArticles_son" href="">
+                	   	  	<div class="son_xuhao" id="">9</div>
+                	   	  	<div class="son_titile">
+                	   	  		如何选择更适合你的 Linux 发行版？如何选择更适合你的 Linux 发行版？
+                	   	  	</div>
+                	   	  </a>
+                	   	  <a class="popularArticles_son" href="">
+                	   	  	<div class="son_xuhao" id="">10</div>
+                	   	  	<div class="son_titile">
+                	   	  		如何选择更适合你的 Linux 发行版？如何选择更适合你的 Linux 发行版？
+                	   	  	</div>
+                	   	  </a>
+                	   </div>
+                    </div>
 				</div>
+				
+				
+                
 				<div class="clear"></div>
 			</div>
 			

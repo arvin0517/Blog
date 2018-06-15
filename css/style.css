@@ -81,13 +81,17 @@ nav ul li a:hover{ margin-top: -12px; box-shadow: 0 2px 6px rgba(100, 100, 100, 
 .articles{ float: left; width: 630px; height: auto; min-height: 500px; /*background: rgba(245, 245, 245, 0.52);*/}
 .articles-title{ width: calc(100% - 10px); height: 34px; background: rgba(245,245,245,0.4); text-shadow: #333 1px 1px 1px; box-shadow: 0px 2px 4px rgba(100, 100, 100,0.3); line-height: 34px; font-size: 15px; color: white; padding: 0 0 0 10px; margin-bottom: 10px;}
 .article-list{ width: 100%; height: auto; display: inline-block; }
-.article-list li{ width: calc(100% - 30px); margin-bottom: 18px; height: 150px; background: rgba(245, 245, 245, 0.6); padding: 20px 15px; box-shadow: 2px 4px 6px rgba(100, 100, 100,0.3);}
+.article-list li{ width: calc(100% - 30px); margin-bottom: 18px; height: 150px; background: rgba(245, 245, 245, 0.6); padding: 20px 15px; box-shadow: 2px 4px 6px rgba(100, 100, 100,0.3); transition: all 0.5s;  -webkit-transition: all 0.5s;}
+.article-list li:hover{ background: rgba(245, 245, 245, 0.8);}
 .article-list li img{ height: 100%; width: 200px; float: left;}
 .article-list li .article-main{ height: 100%; width: 390px; float: right; }    
-.article-list li .article-main h3{ padding: 10px 0;  font-size: 16px; }
-.article-list li .article-main h3 a{ color: #3d3d3d; }
+.article-list li .article-main h3{ font-size: 16px; margin: 5px 0; padding: 5px 0; transition: all 0.5s;  -webkit-transition: all 0.5s;}
+.article-list li .article-main h3:hover{ background: -webkit-linear-gradient(left, #e8be6f , white); /* Safari 5.1 - 6.0 */  padding-left: 10px;}
+.article-list li .article-main h3 a{ color: #3d3d3d; transition: all 0.5s;  -webkit-transition: all 0.5s; }
+/*.article-list li .article-main h3:hover a{ color: white; }*/
 .article-list li .article-main .article-info span{ display: block; float: left; }
-.article-list li .article-main .article-info span a{ color: #838383; padding-right: 18px; font-size: 14px;}
+.article-list li .article-main .article-info span a{ color: #838383; margin-right: 18px; font-size: 14px;}
+.article-list li .article-main .article-info span a:hover{ text-decoration: underline; }
 .article-list li .article-main .article-p{ color: #526163; height: 76px; overflow: hidden; font-size: 14px; padding: 8px 12px 3px 0px; text-indent:20px;}
 /*文章end*/
 
@@ -109,14 +113,28 @@ nav ul li a:hover{ margin-top: -12px; box-shadow: 0 2px 6px rgba(100, 100, 100, 
 /*四个方格end*/
 
 /*博主信息start*/
-.bolg_info{ float: right; width: 310px; height: 230px; background: rgba(255, 182, 60,0.8); position: relative;}
-.bolg_info .myinfo{ /*position: absolute;*/  width: 310px; height: 230px; color: white; font-size: 14px; display: table-cell; vertical-align: middle; }
-
-.bolg_info .myinfo .myinfo_all{ width: 100%; height: auto; display: inline-block; /*position: absolute;*/ /*top: 0; left: 0; right: 0; bottom: 0; margin: auto;*/}
-.bolg_info .myinfo ul{ width: 50%; float: left; } 
-.bolg_info .myinfo .myinfo_left{ text-align: right; padding-right: 4px; width: calc(50% - 4px);}
-.bolg_info .myinfo .myinfo_right{ text-align: left;}
+.bolg_info,.bolg_info .myinfo,.bolg_info .myinfo .myinfo_all,.bolg_info .myinfo .myinfo_all .myinfo_all_img{ width: 310px; height: 230px; }
+.bolg_info{ float: right; /*background: rgba(255, 182, 60,0.8);*/ position: relative;}
+.bolg_info .myinfo{ /*position: absolute;*/ color: white; font-size: 14px; display: table-cell; vertical-align: middle; }
+.bolg_info .myinfo .myinfo_all{ /*display: inline-block;*/ position: relative; /*top: 0; left: 0; right: 0; bottom: 0; margin: auto;*/ overflow: hidden;}
+.bolg_info .myinfo ul{ width: 52%; float: left; padding: 48px 0; position: absolute; z-index: 2; transition: all 0.8s; -webkit-transition: all 0.8s; background: rgba(255, 182, 60,0.8);} 
+.bolg_info .myinfo .myinfo_left{ text-align: right; padding-right: 4px; width: calc(48% - 4px); left: 0; /*left: -148px;*/}
+.bolg_info .myinfo .myinfo_right{ text-align: left; right: 0; /* right:-162px*/}
 .bolg_info .myinfo ul li{ float: none; padding: 4px 0; text-shadow: #333 2px 2px 4px;}
+.bolg_info .myinfo .myinfo_all .myinfo_all_img{ position: absolute; left: 0; right: 0; z-index: 1; opacity: 0; transition: all 0.8s; -webkit-transition: all 0.8;}
+
+.bolg_info .myinfo .myinfo_all:hover .myinfo_left{ left: -148px;}
+.bolg_info .myinfo .myinfo_all:hover .myinfo_right{ right:-162px;}
+.bolg_info .myinfo .myinfo_all:hover .myinfo_all_img{ opacity: 1;}
 /*博主信息end*/
+
+/*热门文章start*/
+.popularArticles{ width: 310px; height: 400px; /*background: rgba(245, 245, 245, 0.6); */}
+.popularArticles_son{ width: 100%; /*background: red;*/ color: #333; font-size: 12px; height: 20px;  margin-bottom: 16px; display: block;  }
+.popularArticles_son .son_xuhao{ float: left; width: 22px; height: 22px; text-align: center; line-height: 22px; background: #a2a2a2; color: white; }
+.popularArticles_son .son_xuhao_top3{ background: wheat; }
+.popularArticles_son .son_titile{ float: left; height: 22px; line-height: 22px; width: 282px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; padding-left: 6px; transition: all 0.6s; -webkit-transition: all 0.6s;  }
+ .popularArticles_son:hover .son_titile{ background: cadetblue; color: white; padding-left: 16px; width: 272px;}
+/*热门文章end*/
 
 /*文章和右边部分end*/
